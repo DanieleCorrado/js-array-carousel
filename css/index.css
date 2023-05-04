@@ -6,6 +6,76 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: violet;
+/* Regole contenitore carosello */
+
+.carousel-container {
+  max-width: 700px;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+/* Regole posizione e visualizzazione immagine */
+
+.my-slide {
+  display: none;
+}
+
+.my-slide img{
+  width: 100% ;
+}
+
+.my-slide.wide {
+  margin-top: 300px;
+}
+
+.my-slide.square {
+  margin-top: 100px;
+}
+
+/* Regole pulsanti per cambiare slide */
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Regole indicatori */
+
+#circle {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
 }
